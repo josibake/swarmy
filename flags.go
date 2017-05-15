@@ -6,19 +6,6 @@ import (
 	"os"
 )
 
-func CreateProject(dir string) {
-
-	// check if dir exists, if not create it
-	if _, err := os.Stat(dir); os.IsNotExist(err) {
-		os.Mkdir(dir, os.ModePerm)
-	} else {
-		fmt.Printf("%s is already a directory. Please choose a different name.",
-			dir,
-		)
-		os.Exit(1)
-	}
-}
-
 func main() {
 
 	// subcommands
@@ -58,11 +45,7 @@ func main() {
 			createCommand.PrintDefaults()
 			os.Exit(1)
 		}
-		fmt.Printf("Creating %s...\n",
-			*createNamePtr,
-		)
 		CreateProject(*createNamePtr)
-
 	}
 
 	// run command
