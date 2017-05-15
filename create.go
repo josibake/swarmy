@@ -32,12 +32,8 @@ func CreateProject(rootDir string) {
 		)
 	}
 
-	// set default values.. this feels really hacky
-	old := []string{"docs", "bin", "src", "results", "data"}
-	defaults := make([]interface{}, len(old))
-	for i, v := range old {
-		defaults[i] = v
-	}
+	// set default values
+	defaults := []interface{}{"doc", "bin", "src", "results", "data"}
 
 	// load defaults
 	viper.SetDefault("directories", defaults)
