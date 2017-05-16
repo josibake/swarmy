@@ -10,7 +10,7 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "swarmy"
-	app.Usage = "data science swiss army knife"
+	app.Usage = "the data science swiss army knife"
 	app.Version = "0.1.0"
 	app.Authors = []cli.Author{
 		cli.Author{
